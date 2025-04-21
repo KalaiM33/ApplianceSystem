@@ -15,3 +15,5 @@ Access it through http://localhost:8080/index.html
 Test Cases:
 1. HomeApplianceControllerTest.java
 2. YearlyShutDownSchedulerTest.java
+
+![ApplicationHome](https://github.com/user-attachments/assets/01bd2e10-2ac7-4abb-963e-9e626b6ae1cf)
