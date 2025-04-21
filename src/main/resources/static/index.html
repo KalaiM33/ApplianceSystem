@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Home Appliance Control</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+    form {
+        margin: 20px;
+    }
+    button {
+        padding: 10px 20px;
+        border: none;
+        background-color: #007BFF;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    select {
+        padding: 5px;
+        margin-right: 10px;
+    }
+</style>
+<body>
+    <h2>Smart Home Control</h2>
+    <form action="/light" method="post">
+        <button type="submit">Toggle Light</button>
+    </form>
+
+    <form action="/fan" method="post">
+        <label>Set Fan Speed:</label>
+        <select name="speed">
+            <option value="0">0 - OFF</option>
+            <option value="1">1 - LOW</option>
+            <option value="2">2 - HIGH</option>
+        </select>
+        <button type="submit">Set Speed</button>
+    </form>
+
+    <form action="/ac" method="post">
+        <label>Set AC Mode:</label>
+        <select name="mode">
+            <option value="OFF">OFF</option>
+            <option value="COOL">ON</option>
+        </select>
+        <button type="submit">Set Mode</button>
+    </form>
+
+    <form action="/shutdown" method="post">
+        <button type="submit">Turn Off All Devices</button>
+    </form>
+
+</body>
+</html>
