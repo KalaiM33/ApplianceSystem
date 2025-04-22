@@ -3,6 +3,7 @@
 <head>
     <title>Smart Home Appliance Control</title>
 </head>
+<link rel="stylesheet" href="style.css">
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -27,6 +28,19 @@
         padding: 5px;
         margin-right: 10px;
     }
+    #deviceForm {
+            display: none;
+            margin-top: 20px;
+        }
+    input[type="text"] {
+            padding: 8px;
+            width: 200px;
+        }
+    button {
+            padding: 8px 12px;
+            margin: 5px;
+            cursor: pointer;
+        }
 </style>
 <body>
     <h2>Smart Home Control</h2>
@@ -56,6 +70,30 @@
     <form action="/shutdown" method="post">
         <button type="submit">Turn Off All Devices</button>
     </form>
+
+    <button id="addDeviceBtn">Add a Device</button>
+    <div id="deviceForm">
+        <input type="text" id="deviceName" placeholder="Enter device name">
+        <button onclick="submitDevice()">Submit</button>
+    </div>
+
+    <script>
+        document.getElementById("addDeviceBtn").addEventListener("click", function() {
+            document.getElementById("deviceForm").style.display = "block";
+        });
+
+        function submitDevice() {
+            const name = document.getElementById("deviceName").value;
+            if(name) {
+
+               window.location.href = "success.html";
+                document.getElementById("deviceForm").style.display = "none";
+                document.getElementById("deviceName").value = ""; // clear input
+            } else {
+                alert("Please enter a device name.");
+            }
+        }
+    </script>
 
 </body>
 </html>
