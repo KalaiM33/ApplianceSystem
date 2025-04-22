@@ -18,4 +18,5 @@ Test Cases:
 
 Note: Included option to add a device from homePage.
 
-![ApplicationHome](https://github.com/user-attachments/assets/01bd2e10-2ac7-4abb-963e-9e626b6ae1cf)
+
+![ApplianceHome](https://github.com/user-attachments/assets/2efabbbf-09d3-4bac-a2ea-b4a4076e235a)
