@@ -16,4 +16,6 @@ Test Cases:
 1. HomeApplianceControllerTest.java
 2. YearlyShutDownSchedulerTest.java
 
+Note: Included option to add a device from homePage.
+
 ![ApplicationHome](https://github.com/user-attachments/assets/01bd2e10-2ac7-4abb-963e-9e626b6ae1cf)
