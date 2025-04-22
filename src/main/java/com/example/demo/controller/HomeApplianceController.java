@@ -1,3 +1,9 @@
+/** Class: HomeApplianceController.java
+* @author: Kalaivani Sivasubramaniam
+* Date: 21.04.2025
+* Controller to handle requests from form to control different home appliances
+*/
+
 package com.example.demo.controller;
 
 import org.springframework.stereotype.Controller;
@@ -19,12 +25,6 @@ public class HomeApplianceController {
     @RequestMapping(path = "/light", method = RequestMethod.POST)
     public String toggleLight() {
         light.toggle();
-       // return "Light is " + (light.isOn() ? "ON" : "OFF");
-       // return "redirect:/light.html";
-      //  if (light.isOn()){model.addAttribute("message","Light is ON");}
-//        if (light.isOn()){
-//            return "redirect:/light.html";
-//        }
         return  (light.isOn() ? "redirect:/light.html" : "redirect:/lightOFF.html");
     }
 
@@ -56,18 +56,8 @@ public class HomeApplianceController {
         return "redirect:/ShutDown.html";
     }
 
-    @GetMapping("/statuss")
-    public String getStatus() {
-        return "Light: " + (light.isOn() ? "ON" : "OFF") +
-               ", Fan Speed: " + fan.getSpeed() +
-               ", AC Mode: " + ac.getMode();
-    }
 
-    @GetMapping("/status")
-    public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
-        model.addAttribute("name", name);
-        return "redirect:/greeting.html";
-    }
+    
 
 
 }
